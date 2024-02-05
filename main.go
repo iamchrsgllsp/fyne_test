@@ -12,6 +12,9 @@ func main() {
 
 	w.SetContent(widget.NewLabel("Welcome to PASTRAMI"))
 	w.Resize(fyne.NewSize(300, 300))
+	card := widget.NewCard("Hi tehre", "substring", w.Canvas().Content())
+	w.SetContent(card)
+	w.MainMenu()
 	w.Show()
 
 	a.Run()
